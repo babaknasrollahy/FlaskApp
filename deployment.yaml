@@ -3,22 +3,22 @@ kind: Deployment
 metadata:
  name: flask-deployment
  labels:
-  app: FlaskApp
+  app: flaskapp
 
 spec:
  replicas: 1
  selector:
   matchLabels:
-   app: FlaskApp
+   app: flaskapp
     
  template:
   metadata:
    labels:
-    app: FlaskApp
+    app: flaskapp
 
- spec:
+  spec:
    containers:
-    - name: FlaskApp
+    - name: flaskapp
       image: babaknasrolahy/flaskapp:latest
       ports:
       - containerPort: 80
@@ -33,7 +33,7 @@ metadata:
 spec:
   type: LoadBalancer
   selector:
-    app: FlaskApp
+    app: flaskapp
   
   ports:
    - protocol: TCP
