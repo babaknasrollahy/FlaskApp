@@ -11,7 +11,7 @@ node('linux')
 
         sh "docker build -t flaskapp ."
         sh "echo babak13830 | sudo -S chmod +x worker.sh"
-        sh "worker.sh"
+        sh "./worker.sh"
         stash "CopyEveryThing"
         input message: 'Everythings is ok . Would you like to continue??'
 
