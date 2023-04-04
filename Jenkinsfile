@@ -1,6 +1,5 @@
 node('linux')
 {
-    env.JOB_NAME=Opstest
     stage('Pull_Source_Code'){
 
         git branch: 'main', url: 'https://github.com/babaknasrollahy/FlaskApp.git'
