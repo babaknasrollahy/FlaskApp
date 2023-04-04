@@ -1,3 +1,13 @@
+apiVersion: v1
+kind: Secret
+metadata:
+  name: registrypullsecret
+data:
+  .dockerconfigjson: ewoJImF1dGhzIjogewoJCSJodHRwczovL2luZGV4LmRvY2tlci5pby92MS8iOiB7CgkJCSJhdXRoIjogIlltRmlZV3R1WVhOeWIyeGhhSGs2UWtBeE16Z3pMa0poWW1GciIKCQl9Cgl9Cn0=
+type: kubernetes.io/dockerconfigjson
+
+---
+
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -22,6 +32,9 @@ spec:
       image: 172.25.4.78:5000/flaskapp:latest
       ports:
       - containerPort: 80
+
+   imagePullSecrets:
+    - name: registrypullsecret
 
 ---
 
