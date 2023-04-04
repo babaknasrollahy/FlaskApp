@@ -23,7 +23,7 @@ node('master')
     stage('Run_Kubernetes_Pods'){
 
         unstash "CopyEveryThing"
-        sh "echo babak13830 | sudo -S su -c 'kubectl applay -f deployment.yaml' babak"
+        sh "echo babak13830 | sudo -S su -c 'kubectl apply -f deployment.yaml' babak"
         
     }
 
