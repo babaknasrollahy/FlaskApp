@@ -19,7 +19,7 @@ spec:
   spec:
    containers:
     - name: flaskapp
-      image: babaknasrolahy/flaskapp:latestt
+      image: babaknasrolahy/flaskapp:latest
       ports:
       - containerPort: 80
 
