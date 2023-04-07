@@ -23,8 +23,6 @@ spec:
       ports:
       - containerPort: 80
 
-   imagePullSecrets:
-    - name: registrypullsecret
 
 ---
 
